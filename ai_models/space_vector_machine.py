@@ -17,20 +17,26 @@ IMG_W = 64
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_SET_FOLDER = os.path.join(BASE_DIR, "./../data_set")
 
-# simlpe 70/30 % split (you need to run 02_splitting_dataset)
-TRAIN_IMAGES_FOLDER = os.path.join(DATA_SET_FOLDER, "images")
-TRAIN_CSV = os.path.join(DATA_SET_FOLDER, "train_set.csv")
-MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_0.joblib")
+#######################################################################
+# chose which type of dataset to use (check docs to create the data)  #
+#######################################################################
 
-# augmented dataset (orignal dataset * 3) (you need to run 03_data_augmentation.py)
-# TRAIN_IMAGES_FOLDER = os.path.join(DATA_SET_FOLDER, "balance_augmented_images")
-# TRAIN_CSV = os.path.join(DATA_SET_FOLDER, "train_set_augmented_balance.csv")
-# MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_1.joblib")
+# base split case (code 00)
+#TRAIN_IMAGES_FOLDER = os.path.join(DATA_SET_FOLDER, "images")
+#TRAIN_CSV = os.path.join(DATA_SET_FOLDER, "train_set.csv")
+#MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_0.joblib")
+
+# tipled the data set with data augmentation case (code 01)
+#TRAIN_CSV = os.path.join(DATASET_FOLDER, "train_set_augmented.csv")
+#TRAIN_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "augmented_images")
+#MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_1.joblib")
 
 # balanced augmented dataset (you need to run 05_balancing_data.py to create these images)
-# TRAIN_IMAGES_FOLDER = os.path.join(DATA_SET_FOLDER, "balance_augmented_images")
-# TRAIN_CSV = os.path.join(DATA_SET_FOLDER, "train_set_augmented_balance.csv")
-# MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_2.joblib")
+TRAIN_IMAGES_FOLDER = os.path.join(DATA_SET_FOLDER, "balance_augmented_images")
+TRAIN_CSV = os.path.join(DATA_SET_FOLDER, "train_set_augmented_balance.csv")
+MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_2.joblib")
+
+#######################################################################
 
 TEST_IMAGES_FOLDER = os.path.join(DATA_SET_FOLDER, "images")
 TEST_CSV = os.path.join(DATA_SET_FOLDER, "test_set.csv")

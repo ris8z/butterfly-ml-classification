@@ -9,21 +9,32 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import MobileNet
 import time
 
-# Costanti
+# constants 
 IMG_H = 150
 IMG_W = 150
 
 DATASET_FOLDER = os.path.join(os.path.dirname(__file__), "./../data_set")
 
-# base split case
-TRAIN_CSV = os.path.join(DATASET_FOLDER, "train_set.csv")
-TRAIN_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "images")
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "./../trained/mn_lr_00.joblib")
+#######################################################################
+# chose which type of dataset to use (check docs to create the data)  #
+#######################################################################
 
-# data augmented and balanced
-# TRAIN_CSV = os.path.join(DATASET_FOLDER, "train_set_augmented_balance.csv")
-# TRAIN_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "balance_augmented_images")
-# MODEL_PATH = os.path.join(os.path.dirname(__file__), "./../trained/mn_lr_01.joblib")
+# base split case (code 00)
+#TRAIN_CSV = os.path.join(DATASET_FOLDER, "train_set.csv")
+#TRAIN_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "images")
+#MODEL_PATH = os.path.join(os.path.dirname(__file__), "./../trained/mn_lr_00.joblib")
+
+# tipled the data set with data augmentation case (code 01)
+#TRAIN_CSV = os.path.join(DATASET_FOLDER, "train_set_augmented.csv")
+#TRAIN_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "augmented_images")
+#MODEL_PATH = os.path.join(os.path.dirname(__file__), "./../trained/mn_lr_01.joblib")
+
+# data augmented and balanced (code 02)
+TRAIN_CSV = os.path.join(DATASET_FOLDER, "train_set_augmented_balance.csv")
+TRAIN_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "balance_augmented_images")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "./../trained/mn_lr_02.joblib")
+
+#######################################################################
 
 
 TEST_CSV = os.path.join(DATASET_FOLDER, "test_set.csv")
