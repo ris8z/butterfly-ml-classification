@@ -35,15 +35,24 @@ pip install -r requirements.txt
 ```
 
 ### create all the 3 different data_sets
-You just need to run all the script in the data_processing folder (use only python for windows)
+You just need to run all the script one by one in the data_processing folder 
 
 ```bash
+# linux
 python3 01_checking_data.py
 python3 02_splitting_dataset.py
 python3 03_data_augmentation.py
 python3 04_checking_augmented_data.py
 python3 05_balancing_data.py
 python3 06_checking_balanced_data.py
+
+#windows
+python 01_checking_data.py
+python 02_splitting_dataset.py
+python 03_data_augmentation.py
+python 04_checking_augmented_data.py
+python 05_balancing_data.py
+python 06_checking_balanced_data.py
 ```
 
 ## How to play with the code
