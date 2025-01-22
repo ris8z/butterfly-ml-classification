@@ -41,7 +41,7 @@ TEST_CSV = os.path.join(DATASET_FOLDER, "test_set.csv")
 TEST_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "images")
 
 
-# Funzioni
+# functions 
 def load_dataframe(csv_path):
     return pd.read_csv(csv_path)
 
@@ -95,17 +95,16 @@ def display_metrics(label_encoder, y_true, y_pred):
     print(f"{'CLASS NAME':<30}|{'PRECISION':<10}|{'RECALL':<10}|{'F1-SCORE':<10}|{'SUPPORT':<10}|{'ACCURACY':<10}")
 
     for key in report:
-        # Salta metriche globali
+        # jump unwanted metrics 
         if key in ['accuracy', 'macro avg', 'weighted avg']:
             continue
 
-        # Usa il nome della classe direttamente
         class_name = key
         data = report[key]
 
         p, r, f1, s = data['precision'], data['recall'], data['f1-score'], int(data['support'])
 
-        # Calcola accuratezza
+        # evalute accuracy for each class 
         class_idx = np.where(label_encoder.classes_ == class_name)[0][0]
         idxs = np.where(y_true == class_idx)[0]
         total_samples = len(idxs)
@@ -140,7 +139,7 @@ def main():
 
         print("Encoding the labels...")
         label_encoder = LabelEncoder()
-        label_encoder.fit(list(train_generator.class_indices.keys()))  # Converte in lista
+        label_encoder.fit(list(train_generator.class_indices.keys()))
         y_train_encoded = np.argmax(y_train, axis=1)
 
         print("Normalizing features...")
