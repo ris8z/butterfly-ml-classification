@@ -31,7 +31,7 @@ DATA_SET_FOLDER = os.path.join(BASE_DIR, "./../data_set")
 #TRAIN_IMAGES_FOLDER = os.path.join(DATASET_FOLDER, "augmented_images")
 #MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_1.joblib")
 
-# balanced augmented dataset (you need to run 05_balancing_data.py to create these images)
+# balanced augmented dataset (code 02)
 TRAIN_IMAGES_FOLDER = os.path.join(DATA_SET_FOLDER, "balance_augmented_images")
 TRAIN_CSV = os.path.join(DATA_SET_FOLDER, "train_set_augmented_balance.csv")
 MODEL_PATH = os.path.join(BASE_DIR, "./../trained/svm_2.joblib")
