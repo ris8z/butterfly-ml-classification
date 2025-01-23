@@ -1,6 +1,11 @@
 # Butterfly classification project
 
-## setup
+## Overview
+The primary goal of this study was to apply machine learning techniques in biodiversity to classify butterfly species.
+And as a part of this effort we incoporated a secondary objective: to explore the performance differnces between a highly complex algorithm like Support Vector Machine (SVM) operating on low-meaningful data versus Logistic Regression,
+a simpler algorithm running on meaningful data extracted by the pre-trained MobileNet model.
+
+## Setup
 
 ### virtual env
 
@@ -130,3 +135,13 @@ All the result is going to be printed to the screen, the metrics that we used ar
 
 A copy of the results found are in the results folder.
 Each name is the short for the alogithm used and the code of the dataset used (00, 01, 02)
+
+## Code References
+
+https://www.kaggle.com/code/edumisvieramartin/butterfly-multiclass-image-classification-cnn 
+
+https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNet
+
+https://keras.io/api/applications/mobilenet/
+
+https://keras.io/api/applications/#usage-examples-for-image-classification-models
